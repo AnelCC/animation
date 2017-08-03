@@ -30,7 +30,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar6"
         android:clickable="true"
-        android:onClick="propertyImage"/>
+        android:onClick="propertyImage"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar2"
@@ -44,7 +46,9 @@
         app:layout_constraintRight_toLeftOf="@+id/img_avatar4"
         android:layout_marginRight="8dp"
         android:clickable="true"
-        android:onClick="propertyAnimationScaleX"/>
+        android:onClick="propertyAnimationScaleX"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar3"
@@ -58,7 +62,9 @@
         app:layout_constraintLeft_toRightOf="@+id/img_avatar4"
         android:layout_marginLeft="8dp"
         android:clickable="true"
-        android:onClick="propertyAnimationScaleY"/>
+        android:onClick="propertyAnimationScaleY"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar4"
@@ -72,7 +78,9 @@
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/txt_animation_a"
         android:clickable="true"
-        android:onClick="animgListener"/>
+        android:onClick="animgListener"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar5"
@@ -84,7 +92,9 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -99,7 +109,9 @@
         app:layout_constraintTop_toBottomOf="@+id/img_avatar1"
         app:layout_constraintHorizontal_bias="0.51"
         android:clickable="true"
-        android:onClick="backgroundScale"/>
+        android:onClick="backgroundScale"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -113,7 +125,9 @@
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/img_avatar1"
         android:clickable="true"
-        android:onClick="scaleTraslate"/>
+        android:onClick="scaleTraslate"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar6"
@@ -127,7 +141,9 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:clickable="true"
-        android:onClick="are"/>
+        android:onClick="are"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/img_avatar7"
@@ -139,7 +155,9 @@
         app:layout_constraintLeft_toRightOf="@+id/img_avatar5"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/btn_example"
@@ -151,7 +169,8 @@
         android:layout_marginRight="27dp"
         app:layout_constraintRight_toRightOf="parent"
         android:clickable="true"
-        android:onClick="addButton"/>
+        android:onClick="addButton"
+        android:layout_marginEnd="27dp" />
 
     <Button
         android:id="@+id/btn_example2"
@@ -161,7 +180,50 @@
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/img_avatar6"
         android:layout_marginLeft="27dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:clickable="true"
+        android:onClick="addButtonSupport4"
+        android:layout_marginStart="27dp" />
+
+    <Button
+        android:id="@+id/btn_example3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintLeft_toRightOf="@+id/btn_example2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/btn_example"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/img_avatar5"
+        android:clickable="true"
+        android:onClick="deprecatedNineOldAndroids"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="11dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="clickable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_example3"
+        android:clickable="true"
+        android:onClick="addActivity"/>
+
 
 
 </android.support.constraint.ConstraintLayout>

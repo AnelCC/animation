@@ -2,6 +2,8 @@ package byili.cherryapps.animations;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,11 +19,14 @@ import com.nineoldandroids.animation.ArgbEvaluator;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.animation.ValueAnimator;
 
+import static byili.cherryapps.animations.R.id.btn_example2;
+import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
+
 public class MainActivity extends AppCompatActivity implements com.nineoldandroids.animation.Animator.AnimatorListener {
 
     TextView tv_animation_a, textView2, textView3;
     ImageView img_a, img_b, img_c, img_d, img_e, img_f, img_g;
-    Button btnExample, btnExample2;
+    Button btnExample, btnExample2, btnExample3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements com.nineoldandroi
         img_g                   =   (ImageView) findViewById(R.id.img_avatar7);
 
         btnExample = (Button) findViewById(R.id.btn_example);
-        btnExample2 = (Button) findViewById(R.id.btn_example2);
+        btnExample2 = (Button) findViewById(btn_example2);
+        btnExample3 = (Button) findViewById(R.id.btn_example3);
 
 
 
@@ -137,6 +143,27 @@ public class MainActivity extends AppCompatActivity implements com.nineoldandroi
                 });
     }
 
+    public void deprecatedNineOldAndroids(View view){
+        animate(btnExample3).alpha(0);
+    }
+
+    public void addActivity(View view){
+        Intent i = new Intent(MainActivity.this, SecondActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
+
+   /* public void addFragment(View view){
+        // Create the transaction
+        FragmentTransaction fts = getSupportFragmentManager().beginTransaction();
+// Configure the "in" and "out" animation files
+        fts.setCustomAnimations(R.anim.left_in, R.anim.right_out);
+// Perform the fragment replacement
+        ft.replace(R.id.fragment_container, newFragment, "fragment");
+// Start the animated transition.
+        ft.commit();
+
+    }*/
 
     public void addButtonSupport4(View view){
         ViewCompat.animate(btnExample2).alpha(0.2f).xBy(-100).yBy(100);
